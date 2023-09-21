@@ -3,10 +3,10 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const countryList = require("country-list");
 const app = express();
-
+const path = require("path");
 const apiKey = "d9fdb8774c0104b0d77561877e4dda6c";
 
-app.use(express.static("/public/"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
