@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
-app.set("views", __dirname + "/public");
+// app.set("views", __dirname + "/public");
 
 
 app.get("/", (req, res) => {
