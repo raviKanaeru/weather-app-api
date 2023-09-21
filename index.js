@@ -9,6 +9,7 @@ const apiKey = "d9fdb8774c0104b0d77561877e4dda6c";
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 
 app.get("/", (req, res) => {
   res.render("index", {
